@@ -1,0 +1,180 @@
+*{
+  margin: 2px 2px;
+  
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 20px 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links li {
+  list-style: none;
+  margin: 0 12px;
+}
+
+.nav-links li.logo {
+  margin-right: auto; /* Pushes the logo to the left */
+}
+
+.nav-links li.logo a img {
+  height: 30px; /* Adjust the height as needed */
+}
+
+.nav-links li a {
+  position: relative;
+  color: #333;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 0;
+  text-decoration: none;
+}
+
+.nav-links li a:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #34efdf;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+
+.nav-links li a:hover:before {
+  width: 100%;
+}
+
+.nav-links li.center a:before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links li.upward a:before {
+  width: 100%;
+  bottom: -5px;
+  opacity: 0;
+}
+
+.nav-links li.upward a:hover:before {
+  bottom: 0px;
+  opacity: 1;
+}
+
+.nav-links li.forward a:before {
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+
+.nav-links li.forward a:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-links .logo img{
+  width: 50px;
+  height: 50px;
+}
+
+
+
+.btn-outline-success {
+font-size: 1rem; /* Adjust the font size as needed */
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.profile-photo {
+  text-align: center;
+  width: 420px;
+}
+
+.profile-details {
+  padding: 20px;
+}
+
+.profile-details p {
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+
+.profile-details ul{
+  padding: 20px;
+  font-size: 12px;
+}
+
+
+.audio-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.audio-player #audio {
+  width: 250px;
+  height: 50px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite alternate;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 5s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply the animation to the image */
+.profile-photo img {
+  animation: zoom 4s ease-in-out infinite;
+}
+
+.text {
+  font-size: 14px;
+}
+
+
+
+  /* Custom CSS Animation */
+  @keyframes scaleUp {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Apply animation to card */
+#card1 {
+    animation: scaleUp 0.5s ease-in-out;
+}
+
